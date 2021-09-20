@@ -894,6 +894,7 @@ img{
 
 .contact__input{
     width: 100%;
+    border-radius: .4rem;
     background-color: var(--container-color);
     color: var(--text-color);
     font-family: var(--body-font);
