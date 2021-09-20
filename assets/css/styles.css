@@ -882,7 +882,7 @@ img{
 }
 
 .contact__content{
-    background-color: var(--first-color-lighter);
+    background-color: var(--input-color);
     border-radius: .5rem;
     padding: .75rem 1rem .25rem;
 } 
