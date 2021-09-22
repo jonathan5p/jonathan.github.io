@@ -102,7 +102,6 @@ body.dark-theme{
 .change-them:hover{
     color: var(--first-color);
 }
-
 /*==================== BASE ====================*/
 
 *{
@@ -448,6 +447,33 @@ img{
     justify-content: center;
 }
 
+
+.about__icon__container{
+    text-align: center;
+    align-items: center;
+}
+
+.about__icon{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.about__icon:hover{
+    color: var(--first-color);
+}
+
+.about__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.single-services {
+    text-align: center;
+    margin-top: 60px;
+}
+
 /*==================== SKILLS ====================*/
 .skills__container{
     row-gap: 0;
@@ -528,18 +554,42 @@ img{
 }
 
 /*==================== SKILLS 1====================*/
-.skills__html{
+.skills__python{
     width: 90%;
 }
-.skills__css{
-    width: 80%;
+.skills__nlp{
+    width: 55%;
 }
-.skills__js{
+.skills__cv{
     width: 60%;
 }
-.skills__react{
+.skills__rl{
+    width: 45%;
+}
+
+.skills__model{
+    width: 90%;
+}
+.skills__vis{
+    width: 70%;
+}
+.skills__ea{
+    width: 80%;
+}
+.skills__teaching{
     width: 85%;
 }
+
+.skills__db{
+    width: 50%;
+}
+.skills__auto{
+    width: 55%;
+}
+.skills__aws{
+    width: 40%;
+}
+
 
 /*==================== QUALIFICATION ====================*/
 
@@ -715,6 +765,76 @@ img{
     visibility: visible;
 }
 
+/*==================== CERTIFICATIONS ====================*/
+.certification__card{
+    width: 30%;
+    max-height: 30%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #d9dbdf;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #d9dbdf;
+    margin-bottom: 30px;
+    flex: 0 0 30%;
+    transition: transform .2s;
+}
+
+.certification__card:hover{
+    transform: scale(1.1);
+}
+
+
+.certification__content {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.certification__content .certification__overlay {
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all .4s ease-in-out 0s;
+}
+
+.certifdication__header {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.certification__logo {
+    margin: 3px;
+    width: auto;
+    height: 100px;
+}
+
+.certification__body {
+    margin: 0;
+    font-size: var(--small-font-size);
+
+}
+
+.certification__title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.certification__container{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0;
+    justify-content: space-between;
+}
+
 /*==================== PORTFOLIO ====================*/
 
 .portfolio__container{
@@ -864,7 +984,6 @@ img{
     margin-bottom: var(--mb-2);
 }
 
-
 .contact__icon{
     font-size: 2rem;
     color: var(--first-color);
@@ -874,6 +993,7 @@ img{
 .contact__title{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
+    color: var(--text-color);
 }
 
 .contact__subtitle{
@@ -887,6 +1007,7 @@ img{
     padding: .75rem 1rem .25rem;
 } 
 
+
 .contact__label{
     font-size: var(--smaller-font-size);
     color: var(--title-color);
@@ -895,13 +1016,22 @@ img{
 .contact__input{
     width: 100%;
     border-radius: .4rem;
-    background-color: var(--container-color);
+    background-color: var(--input-color);
     color: var(--text-color);
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     border: none;
     outline: none;
     padding: .25rem .5rem .5rem 0;
+}
+
+.contact__form{
+    justify-content: space-between;
+}
+
+.contact__form-bg{
+    background-color: var(--input-color);
+    border-radius: .5rem;
 }
 
 
@@ -1008,7 +1138,7 @@ img{
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px){
+@media screen and (max-width: 360px){
     .container{
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
@@ -1072,7 +1202,6 @@ img{
     }
 }
 
-
 /* For medium devices */
 @media screen and (max-width: 568px){
     .home__content{
@@ -1088,28 +1217,32 @@ img{
         justify-self: center;
     }
 
-    .about__container,
-    .skills__container,
-    .portfolio__content,
-    .project__container,
-    .contact__container,
-    .footer__container{
-        grid-template-columns: repeat(2,1fr);
-    }
-
     .qualification__sections{
         display: grid;
         grid-template-columns: .6fr;
         justify-content: center;
     }
-
-
 }
+
+@media screen and (max-width: 768px){
+    .certification__container{
+        flex-direction: column;
+    }
+
+    .certification__card{
+        width: 100%;
+    }
+}
+
 
 @media screen and (min-width: 768px){
     .container{
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .contact__container{
+        grid-template-columns: repeat(2,1fr);
     }
 
     body{
